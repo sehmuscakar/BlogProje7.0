@@ -1,0 +1,33 @@
+﻿@model Category //sınıfı çağırdık
+@{
+    ViewData["Title"] = Model.Name;
+}
+
+<h1>@Model.Name</h1>
+
+<div class="row">
+
+    @foreach (var item in Model.Posts)
+    {
+      @*  <div class="col-lg-6">
+            <!-- Blog post-->
+            <div class="card mb-4">
+                <a href="/Posts/Details/@item.Id"><img class="card-img-top" src="/Img/@item.Image" alt="..." /></a>
+                <div class="card-body">
+                    <div class="small text-muted">@item.CreateDate</div>
+                    <h2 class="card-title h4">@item.Name</h2>
+                    <p class="card-text">@item.Description</p>
+                    <a class="btn btn-primary" href="/Posts/Details/@item.Id">Devamını Oku</a>
+                </div>
+            </div>
+
+        </div>*@
+
+        <partial name="BlogView" model="item"/>
+            
+       
+    }
+
+
+</div>
+
